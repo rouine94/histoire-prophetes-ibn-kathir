@@ -1,193 +1,218 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
-<html>
-<head>
-<title></title>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<!--<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- toggle menu links -->
-<link href="css/component.css" rel="stylesheet" type="text/css"  />
-<!-- //menu links -->
-<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-<!-- effect9 links -->
-<link href="css/ihover.css" rel="stylesheet" media="all">
-<!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<!--<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>-->
-	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-	<!-- start-smoth-scrolling -->
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Fullscreen Pageflip Layout with BookBlock</title>
+		<meta name="description" content="Fullscreen Pageflip Layout with BookBlock" />
+		<meta name="keywords" content="fullscreen pageflip, booklet, layout, bookblock, jquery plugin, flipboard layout, sidebar menu" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
+		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script src="js/modernizr.custom.79639.js"></script>
+		
+	</head>
+	<body>
+		<div id="container" class="container">	
 
-</head>
-<!-- slide-toggle-menu -->
-<body class="cbp-spmenu-push">
-       <!--top-header-->
-		<!--bottom-->
-		  <section class="button">
-					<button id="showLeftPush"><img src="img/menu.png" alt=""></button>
-		   </section>
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-				<h3>Histoires</h3>
-						<a href="un.html">LA CRÉATION D'ADAM</a>
-						<a href="">HISTOIRE DES FILS D'ADAM : Cain(Qabil)et Abel(Habil)</a>
-						<a href="">HISTOIRE IDRISS (ÉNOCH) sur lui le salut</a>
-						<a href="">HISTOIRE DE NOÉ(NÛH) sur lui le salut</a>
-                        <a href="">HISTOIRE DE HÛD(NÛH) sur lui le salut</a>
-                        <a href="">HISTOIRE DE SÂLIH sur lui le salut, le prophète de Thamud</a>
-                        <a href="">HISTOIRE D'ABRAHAM (IBRAHIM), l'ami intime du Misericordieux</a>
-                        <a href="">HISTOIRE DU SACRIFIE, ISMAEL(ISMS'IL),sur lui le salut</a>
-                        <a href="">HISTOIRE DU PEUPLE DE LOTH (LÛT), sur lui Ie salut</a>
-                        <a href="">HISTOIRE DE MADYAN, LE PEUPLE DE SHU'AYB, sur lui le salut</a>
-                        <a href="">HISTOIRE ISMAËL</a>
-                        <a href="">HISTOIRE ISAAC (ISHÂQ) FILS D'ABRAHAM: LE NOBLE, FILS DU NOBLE, sur eux le salut</a>
-                        <a href="">QUELQUES ÉLÉMENT DE LA VIE DE JACOB ET L'HISTOIRE DE SON FILS JOSEPH, sur lui Ie salut</a>
-                        <a href="">HISTOIRE DE JOB (AYYÛB), sur lui le salut</a>
-                        <a href="">HISTOIRE DE DHÛL-KIFL, sur lui le salut</a>
-                        <a href="">HISTOIRE DE JONAS (YÛNUS), sur lui le salut</a>
-                        <a href="">HISTOIRE DE MOÏSE (MÛSÂ) L'INTERLOCUTEUR DE DIEU, sur lui le salut</a> 
-                        <a href="">HISTOIRE D'ÉLIE (ILYAS), sur lui le salut</a>
-                        <a href="">HISTOIRE D'ÉLISÉE (ALYASA), sur lui le salut</a>
-                        <a href="">HISTOIRE DE SAMUEL ET LES DÉBUTS DE DAVID, sur lui le salut</a>
-                        <a href="">HISTOIRE DE DAVID (DÂWÛD):SES MÉRITES, SES VERTUS ET LES PREUVES DE SA PROPHETIE</a>
-                        <a href="">SALOMON (SULAYMAN) FILS DE DAVID, sur lui le salut</a>
-                        <a href="">HISTOIRE DE ZACHARIE (ZAKARIYYA) ET DE JEAN LE BAPTISTE (YAHYA), sur eux le salut</a>
-                        <a href="">HISTOIRE DE JÉSUS (ÎSÂ) FILS DE MARIE (MARYAM), sur lui le salut</a>                   
-		    </nav>
-		  
-		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
-		<script>
-			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-				showLeftPush = document.getElementById( 'showLeftPush' ),
-				showRightPush = document.getElementById( 'showRightPush' ),
-				body = document.body;
-
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' ); 
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};
-
-			function disableOther( button ) {
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-				if( button !== 'showRightPush' ) {
-					classie.toggle( showRightPush, 'disabled' );
-				}
-			}
-		</script>
-<!-- banner -->
-<div class="banner">
-	<div class="logo">
-		<br /><br /><h1><a>HISTOIRE DES PROPHETES</a></h1>
-	</div>
-	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-		<div id="small-dialog" class="mfp-hide">
-			<div class="search-top">
-				<div class="login">
-					<input type="submit" value="">
-					<input type="text" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
-				</div>			
-			</div>
-			<script>
-						$(document).ready(function() {
-						$('.popup-with-zoom-anim').magnificPopup({
-							type: 'inline',
-							fixedContentPos: false,
-							fixedBgPos: true,
-							overflowY: 'auto',
-							closeBtnInside: true,
-							preloader: false,
-							midClick: true,
-							removalDelay: 300,
-							mainClass: 'my-mfp-zoom-in'
-						});
-																						
-						});
-			</script>				
-		</div>
-	<div class="banner-info">
-		<script src="js/responsiveslides.min.js"></script>
-			<script>
-									// You can also use "$(window).load(function() {"
-									$(function () {
-									 // Slideshow 4
-									$("#slider3").responsiveSlides({
-										auto: true,
-										pager: false,
-										nav: true,
-										speed: 500,
-										namespace: "callbacks",
-										before: function () {
-									$('.events').append("<li>before event fired.</li>");
-									},
-									after: function () {
-										$('.events').append("<li>after event fired.</li>");
-										}
-										});
-										});
-			</script>
-			<div  id="top" class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="banner-text">
-							<h5>LES CINQ OBJECTIF DES HISTOIRES DES PROPHÈTES</h5>					
-						</div>
-					</li>
-                    <li>
-						<div class="banner-text">
-							<h5>PREMIEREMENT:<br/>RAFFERMIR LES CROYANTS</h5>					
-						</div>
-					</li>
-					<li>
-						<div class="banner-text">
-							<h5>DEUXIEMENT:<br/>RENFORMER LA VIE FAMILIALE</h5>
-						</div>
-					</li>
-                    <li>
-						<div class="banner-text">
-							<h5>TROISIEMENT:<br/>NOUS AIDER A MIEUX COMPRENDRE LE CORAN</h5>
-						</div>
-					</li>
-                    <li>
-						<div class="banner-text">
-							<h5>QUATRIAMENT:<br/>LA CONSOLIDATION DU DOGME ISLAMIQUE</h5>
-					</li>
-                    <li>
-						<div class="banner-text">
-							<h5>CINQUIEMENT:<br/>ENSEIGNER L'ART DE LA DA'WA PRÊCHE </h5>
-						</div>
-					</li>
+			<div class="menu-panel">
+				<h3>Les Histoires</h3>
+				<ul id="menu-toc" class="menu-toc">
+				<li class="menu-toc-current"><a href="#item1">Premier Page</a></li>
+					<li><a href="#item2">LA CRÉATION D'ADAM</a></li>
+					<li><a href="">HISTOIRE DES FILS D'ADAM : Cain(Qabil)et Abel(Habil)</a></li>
+					<li><a href="">HISTOIRE IDRISS (ÉNOCH) sur lui le salut</a></li>
+					<li><a href="">HISTOIRE DE NOÉ(NÛH) sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE DE HÛD(NÛH) sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE DE SÂLIH sur lui le salut, le prophète de Thamud</a></li>
+                    <li><a href="">HISTOIRE D'ABRAHAM (IBRAHIM), l'ami intime du Misericordieux</a></li>
+                    <li><a href="">HISTOIRE DU SACRIFIE, ISMAEL(ISMS'IL),sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE DU PEUPLE DE LOTH (LÛT), sur lui Ie salut</a></li>
+                    <li><a href="">HISTOIRE DE MADYAN, LE PEUPLE DE SHU'AYB, sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE ISMAËL</a></li>
+                    <li><a href="">HISTOIRE ISAAC (ISHÂQ) FILS D'ABRAHAM: LE NOBLE, FILS DU NOBLE, sur eux le salut</a></li>
+                    <li><a href="">QUELQUES ÉLÉMENT DE LA VIE DE JACOB ET L'HISTOIRE DE SON FILS JOSEPH, sur lui Ie salut</a></li>
+                    <li><a href="">HISTOIRE DE JOB (AYYÛB), sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE DE DHÛL-KIFL, sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE DE JONAS (YÛNUS), sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE DE MOÏSE (MÛSÂ) L'INTERLOCUTEUR DE DIEU, sur lui le salut</a></li> 
+                    <li><a href="">HISTOIRE D'ÉLIE (ILYAS), sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE D'ÉLISÉE (ALYASA), sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE DE SAMUEL ET LES DÉBUTS DE DAVID, sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE DE DAVID (DÂWÛD):SES MÉRITES, SES VERTUS ET LES PREUVES DE SA PROPHETIE</a></li>
+                    <li><a href="">SALOMON (SULAYMAN) FILS DE DAVID, sur lui le salut</a></li>
+                    <li><a href="">HISTOIRE DE ZACHARIE (ZAKARIYYA) ET DE JEAN LE BAPTISTE (YAHYA), sur eux le salut</a></li>
+                    <li><a href="">HISTOIRE DE JÉSUS (ÎSÂ) FILS DE MARIE (MARYAM), sur lui le salut</a> </li>
 				</ul>
 			</div>
-			
-	</div>
-</div>
-	<!-- js -->
-		 <script src="js/bootstrap.js"></script>
-	<!-- js -->
-<!-- smooth scrolling -->
-	
-<!-- //smooth scrolling -->
-</body>
+
+			<div class="bb-custom-wrapper">
+				<div id="bb-bookblock" class="bb-bookblock">
+					<div class="bb-item">  					
+						    <img src="img/icon.png" width="320" height="508"/>						
+					</div>
+					<div class="bb-item" id="item2">
+						<div class="content">
+							<div class="scroller">
+								<h3><b><i><font color="#f1103a">La création d'Adam, sur lui le salut</font></i></b></h3>
+								<p>Dieu dit : «<b>Lorsque ton Seigneur confia aux anges : Je vais établir sur la Te"rre un vicaire". lis dirent : "Vas-
+						Tu y placer quelqu'un qui y sèmera la corruption et fera couler le sang, quand nous sommes là à te sanctifier et à
+						Te glorifier ?" II dit : "En vérité, Je sais ce que vous ne savez pas !" Et II apprit à Adam tous les noms (de toutes
+						choses), puis Illes presenta aux anges et dit : "Informez- Moi des noms de ceux-là, si vous etes véridiques (dans
+						votre prétention a etre plus méritants qu'Adam) !" Ils dirent : "Gloire à Toi ! Nous n'avons de savoir que ce que
+						Tn nous as appris. Certes c'est Toi I'Omniscient, Ie Sage." II dit : "Ô Adam, informe-les de ces noms" ; puis quand
+						celui-ci les eut informés de ces noms, Dieu dit : "Ne vous ai-Je pas dit que Je connais les mystères des Cieux et de la
+						Terre, et que Je sais ce que vous divulguez et ce que vous cachiez ?" Et lorsque Nous demandâmes aux anges de se
+						prosterner devant Adam, ils se prosternèrent à l'exception d'Iblîs qui refusa, s'enfla d'orgueil et fut parmi les in fidèles.
+						Et Nous dîmes : "Ô Adam, habite le Paradis, toi et ton épouse, et nourrissez-vous-en de partout a votre guise ;
+						mais n'approchez pas de I'arbre que voici : sinon vous seriez du nombre des injustes." Peu de temps apres, Satan
+						les fit glisser de la et les fit sortir du lieu on Us etaient. Et Nous dimes: "Descendez (du Paradis) ; ennemis les uns
+						des autres. Et pour vous il y aura une demeure sur la Terre, et un usufruit pour un temps." Puis Adam reçut de</b></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item3">
+						<div class="content">
+							<div class="scroller">
+								
+								<p><b>son Seigneur des paroles, et Dieu agréa son repentir car c'est Lui certes, l'Accueillant au repentir, le
+						        Misericordieux. Nous dimes: "Descendez d'ici, vous tous ! Toutes les fois que Je vous enverrai un guide, ceux qui le
+						        suivront, n'auront rien à craindre et ne seront point affligés." Et ceux qui ne croient pas (it Nos Messagers) et traitent
+						        de mensonge Nos revelations, ceux-lit sont les gens du Feu oil ils demeureront eternellement. </b>» (2, 30-39)</p>
+
+								<p>Le trés haute dit aussi:«<b>Pour Dieu, Jesus est comme Adam qu'll crea de poussiere, puis II lui dit : "Sois !", et il
+						        fut</b>» (3, 59). Il dit aussi: «<b>Ô hommes ! Craignez votre Seigneur qui vous a créés d'un seul être,
+								t a cree de celuici
+						        son epouse, et qui de ces deux-lit a fait repandre (sur la Terre) beau coup d'hommes et de femmes. Craignez Dieu
+						        au nom duquel vous vous implorez les uns les autres, et craignez de rom pre les liens du sang. Certes Dieu vous
+						        observe parfaitement.</b>» (4, 1)</p>
+
+								<p>Il dit aussi:«<b>Ô hommes ! Nous vous avons crees d'un male et d'une femelle, et Nous avons fait de vous des
+						        nations et des tribus, pour que vous entre-connaissiez. Le plus noble d'entre vous, aupres de Dieu, est Ie plus pieux.
+						        Dieu est certes Omniscient et Grand Connaisseur.</b>» (49, 13)</p>
+
+								<p>11 dit aussi : «<b>C'est Lui qui vous a crees d'un seul etre
+						        dont II a tire son epouse, pour qu'il trouve de la tranquillite aupres d'elle</b>»(7, 189).</p>
+
+								<p>II dit également :«<b>Nous vous avons créés, puis Nous vous avons dit aux anges : "Prosternez-vous devant Adam !" lis se prosternèrent 
+                                à l'exception d'Iblîs qui ne fut point de ceux qui se prosternèrent.(Dieu) dit:"Qu'est-ce qui t'empeche de te</b></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item4">
+						<div class="content">
+							<div class="scroller">
+								
+								<p><b>prosterner quand Je te l'ai commandé ?"II repondit : "Je suis meilleur que lui: Tu m'as créé de feu, alors que Tu l'as
+                                créé d'argile." (Dieu) dit : "Descends d'ici, tu n'as pas à t'enfler d'orgueil ici. Sors, te voilà parmi les méprisés !"
+                                "Accorde-moi un delai, dit (Satan) jusqu'au jour ou ils seront ressuscités." (Dieu) dit : "Tu es de ceux à qui délai
+                                est accordé." "Puisque Tu m'as mis en erreur, dit (Satan), je m'assoirai pour eux sur Ton droit chemin, puis je les
+                                assaillirai de devant, de derrière, de leur droite et de leur gauche. Et, pour la plupart, To ne les trouveras pas reconnaissants."
+                                "Sors de la, dit (Dieu) banni et rejete. Quiconque te suit parmi eux... de vous tous, J'emplirai
+                                l'Enfer." "Ô Adam, habite Ie Paradis, toi et ton épouse ; et mangez-en vous deux, à votre guise; et n'approchez pas
+                                l'arbre que voici ; sinon, vous seriez du nombre des injustes." Puis Ie diable, afin de leur rendre visible ce qui leur
+                                était caché -leurs nudités-, leur chuchota : "Votre Seigneur ne vous a interdit cet arbre que pour vous empêcher
+                                de devenir des anges ou d'être immortels."Et il leur jura : "Vraiment, je suis pour vous deux un bon conseiller."
+						        Alors il les fit tomber par tromperie. Puis, lorsqu'ils eurent goûté de l'arbre, leurs nudités leur devinrent visibles ;
+						        et ils commencèrent tous deux à y attacher des feuilles du Paradis. Et leur Seigneur les appela : "Ne vous avais-Je pas interdit cet arbre ?
+						        Et ne vous avais-Je pas dit que le diable était pour vous un ennemi déclaré ?" Tous deux dirent : "Ô notre Seigneur, nous avons fait du tort à nous-mêmes.
+						        Et si Tu ne nous pardonnes pas et ne nous fais pas miséricorde, nous serons trés certainement du nombre des perdants."
+						        "Descendez, dit (Dieu), vous serez ennemis les uns des autres. Et il y aura pour vous sur Terre séjour et jouissance, pour un temps. Là, dit (Dieu), 
+						        vous vivrez, là vous mourrez, et de là on vous fera sortir."</b>(7, 1125)</p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item5">
+						<div class="content">
+							<div class="scroller">
+								<p>Le trés haut dit dans un autre verset: « <b>C'est d'elle (la terre) que Nous vous avons créés,
+						        et en elle Nous vous ferons retourner, et d'elle Nous vous ferons sortir une fois encore. </b>» (20, 55)</p>
+
+								<p>Il dit aussi: «<b>Nous créâmes l'homme d'une argile crissante, extraite d'une boue malléable. 
+						        Et quant au djinn, Nous l'avions auparavant créé d'un feu d'une chaleur ardente. Et lorsque ton Seigneur dit aux anges : "Je vais créer un homme d'argile crissante,
+						        extraite d'une boue malléable, et dés que Je l'aurai harmonieusement formé et lui aurai insufflé Mon souffle de vie, jetez-vous alors, prosternés devant lui."
+						        Alors, les anges se prosternèrent tous ensemble, excepté Iblîs qui refusa d'etre avec les prosternés. Alors Dieu (dit) : "Ô Iblîs, pourquoi n'es-tu pas au nombre des prosternés ?"
+						        Il dit : "Je ne puis me prosterner devant un hom me que tu as créé d'argile crissante, extraite d'une boue malléable."
+						        Et Dieu (dit) :"Sors de la (du Paradis), car te voilà banni ! Et malediction sur toi, jusqu'au jour de la Rétribution !"
+						        Il dit : "Ô mon Seigneur, donne-moi donc un délai jusqu'au jour où ils (les gens) seront ressuscités
+						       (Dieu) dit : "Tu es de ceux à qui ce délai est accordé, jusqu'au jour de I'Instant connu (de Dieu)."
+							   Il dit : "Ô mon Seigneur, parce que tu m'as induit en erreur, eh bien je leur enjoliverai la vie sur Terre et les égarerai tous,
+						       à l'éxception, parmi eux, de Tes serviteurs élus." (Dieu) dit : "Voici une voie droite (qui mène) vers Moi.
+						       Sur Mes serviteurs tu n'auras aucune autorité, excepté sur celui qui te suivra parmi les dévoyés. Et l'Enfer sera surement leur lieu de rendez-vous à tous.
+						       sept portes ; et chaque porte en a sa part déterminée."</b>» (15,26-44)</p>
+
+								<p>Il dit de même: «<b>Et lorsque Nous avons dit aux anges : "Prosternez-vous devant Adam", ils se prosternèrent, à</b></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item6">
+						<div class="content">
+							<div class="scroller">
+							<p><b>l'exception d'Iblîs, qui dit : "Me prosternerai-je devant quelqu'un que Tn as créé d'argile ?" II dit encore: "Vois-Tu ?
+						    Celui que tu as honoré au-dessus de moi, si Tu me donnais du répit jnsqu'au jour de la Résurrection,
+						    j'éprouverai, certes, sa descendance, excepté un petit nombre (parmi eux)."
+						    Et (Dieu) dit : "Va-t-en ! Quiconque d'entre eux te suivra ... votre sanction sera I'Enfer, une ample rétribution.
+						    Excite, par ta voix, ceux d'entre eux que tu pourras, rassemble contre eux ta cavalerie et ton infanterie ; associe-toi à eux dans leurs biens et leurs enfants et fais-leur des promesses." Or, le diable ne leur fait des promesses qu'en tromperie.
+						    "Quant à Mes serviteurs, tu n'as aucun pouvoir sur eux. Et ton Seigneur suffit pour les protéger !" </b>»(17, 61-65)</p>
+						    <p>II dit également:«<b>Et lorsque Nous dîmes aux anges : "Prosternez-vous devant Adam !",
+						    Ils se prosternèrent, excepté Iblîs (Satan) qui était du nombre des génies et qui se révolta contre le commandement de son Seigneur.
+						    Allezvous cependant le prendre, ainsi que sa descendance, pour alliés en dehors de Moi, alors qu'ils sont vos ennemis ? Quel mauvais échange pour les injustes !</b>» (18, 50)</p>
+						    <p>Dieu dit également:«<b>En effet, Nous avons auparavant fait une recommandation à Adam, mais il oublia ; et Nous n'avons pas trouvé chez lui de résolution ferme.
+						    Et quand Nous dîmes aux anges : "Prosternez-vous devant Adam !", ils se prosternèrent, excepté Iblîs qui refusa.
+						    Alors Nous dîmes: "Ô Adam, celui-là est vraiment un ennemi pour toi et ton épouse. renez garde qu'il vous fasse sortir du Paradis, car alors to seras malheureux.
+						    Car tu n'y auras pas faim ni ne seras nu, tu n'y auras pas soif ni ne seras frappé par l'ardeur du soleil"
+						    Puis le diable le tenta en disant : "Ô Adam, t'indiquerai-je l'arbre de l'éternité et un royaume impérissable ?" Tous deux (Adam et Ève) en</b></p>
+							</div>
+						</div>
+					</div>	
+					<div class="bb-item" id="item6">
+						<div class="content">
+							<div class="scroller">
+							<p><b>mangèrent.Alors leur apparut leur nudité. Ils se mirent à se couvrir avec des feuilles du Paradis. Adam désobéit ainsi à son Seigneur et il s'égara.
+						Son Seigneur l'a ensuite élu, agréé son repentir et l'a guidé. Il dit : "Descendez d'ici, (Adam et Ève), vous serez tous (avec vos descendants) ennemis les uns des autres.
+						Puis, si jamais un guide vous vient de Ma part, quiconque suit Mon guide ne s'égarera ni ne sera malheureux.
+						Et quiconque se détourne de Mon Rappel, mènera certes, une vie pleine de gêne, et le jour de la Résurrection Nous l'amènerons aveugle au rassemblement."
+						Il dira : "Ô mon Seigneur, pourquoi m'as-Tu ressuscité aveugle alors qu'auparavant je voyais clair ?"
+						(Dieu) lui dira : "C'est ainsi. Nos Signes te sont venus, tu les as oubliés. De même en ce jour es-tu oublié."</b>»(20, 115-126)</p>
+						<p>Il dit également<:«<b>Dis: "Ceci (Ie Coran) est une grande nouvelle, mais vous vous en détournez.
+						Je n'avais aucune connaissance de la cohorte sublime au moment où elle disputait. ll m'est seulement révélé que je suis un avertisseur clair."
+						Quand ton Seigneur dit aux anges : "Je vais créer d'argile un être humain. Quand Je l'aurai bien formé et lui aurait insufflé de Mon Esprit, jetez-vous devant lui, prosternés."
+						Alors tous les anges se prosternèrent, a l'exception d'Iblîs qui s'enfla d'orgueil et fut du nombre des infidèles.
+						(Dieu) lui dit : "Ô Iblîs, qui t'a empêché de te prosterner devant ce que J'ai créé de Mes mains? T'enfles-tu d'orgueil ou te considères-tu parmi les hauts placés ?"
+						"Je suis meilleur que lui, dit (Iblîs). Tu m'as créé de feu et To Pas créé d'argile."
+						(Dieu) dit : "Sors d'ici, te voilà banni ; et sur toi sera Ma malédiction jusqu'au jour de la Rétribution." "Seigneur, dit (Iblîs), donne-moi un délai, jusqu'au jour où ils seront ressuscités."
+						(Dieu) dit : "Tu es de ceux à qui un délai est accordé, jusqu'au jour de I'Instant bien connu." "Par ta puissance, dit (Satan), je les</b></p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<nav>
+					<span id="bb-nav-prev">&larr;</span>
+					<span id="bb-nav-next">&rarr;</span>
+				</nav>
+
+				<span id="tblcontents" class="menu-button">Table of Contents</span>
+
+			</div>
+				
+		</div><!-- /container -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/jquery.mousewheel.js"></script>
+		<script src="js/jquery.jscrollpane.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/jquery.bookblock.js"></script>
+		<script src="js/page.js"></script>
+		<script>
+			$(function() {
+
+				Page.init();
+
+			});
+		</script>
+	</body>
 </html>
